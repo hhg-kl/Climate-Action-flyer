@@ -1,128 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Links to the Sites</title>
-    <style>
-      :root {
-        --bg-color: #fff;
-        --text-color: #323232;
-        --primary-color: #2e6f40;
-        --secondary-color: #f4b8c7;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links to the Sites</title>
+  <style>
+    :root {
+      --bg-color: #fff;
+      --text-color: #323232;
+      --primary-color: #2e6f40;
+      --secondary-color: #f4b8c7;
+    }
 
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        position: relative;
-        overflow-x: hidden;
-      }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      .content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-      }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
 
+    .corner-svg {
+      position: fixed;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .corner-svg.top-left {
+      top: -100px;
+      left: -100px;
+    }
+
+    .corner-svg.bottom-right {
+      bottom: -120px;
+      right: -80px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: var(--primary-color);
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .link-button {
+      display: block;
+      padding: 1rem 2rem;
+      background-color: var(--primary-color);
+      color: var(--bg-color);
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(46, 111, 64, 0.3);
+    }
+
+    .link-button:hover {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(244, 184, 199, 0.4);
+    }
+
+    .link-button:active {
+      transform: translateY(0);
+    }
+
+    .link-button span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      opacity: 0.85;
+      margin-top: 0.25rem;
+      word-break: break-all;
+    }
+
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-color);
+      opacity: 0.7;
+      z-index: 1;
+    }
+
+    @media (max-width: 480px) {
       h1 {
+        font-size: 1.8rem;
         margin-bottom: 2rem;
-        font-size: 2.5rem;
       }
 
-      .button-container {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-        max-width: 300px;
+      .link-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
       }
+    }
+  </style>
+</head>
+<body>
+  <!-- Decorative corner SVGs -->
+  <svg class="corner-svg top-left" width="300" height="300" viewBox="0 0 300 300">
+    <circle cx="150" cy="150" r="140" fill="var(--secondary-color)" opacity="0.6"/>
+    <circle cx="80" cy="80" r="60" fill="var(--primary-color)" opacity="0.4"/>
+  </svg>
 
-      .btn {
-        display: block;
-        padding: 1rem 2rem;
-        text-align: center;
-        text-decoration: none;
-        color: white;
-        background-color: var(--primary-color);
-        border-radius: 8px;
-        font-weight: bold;
-        transition: transform 0.2s, opacity 0.2s;
-      }
+  <svg class="corner-svg bottom-right" width="350" height="350" viewBox="0 0 350 350">
+    <circle cx="175" cy="175" r="160" fill="var(--primary-color)" opacity="0.5"/>
+    <circle cx="280" cy="280" r="80" fill="var(--secondary-color)" opacity="0.6"/>
+  </svg>
 
-      .btn:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
-      }
+  <main>
+    <h1>Links to the Sites</h1>
+    
+    <div class="button-container">
+      <a href="https://kaiserslautern.bund.de" class="link-button" target="_blank" rel="noopener noreferrer">
+        BUND
+        <span>kaiserslautern.bund.de</span>
+      </a>
 
-      .decoration {
-        position: absolute;
-        z-index: 1;
-      }
+      <a href="https://fabianternis.de" class="link-button" target="_blank" rel="noopener noreferrer">
+        PLACEHOLDER
+        <span>fabianternis.de</span>
+      </a>
 
-      .top-left {
-        top: -50px;
-        left: -50px;
-        fill: var(--secondary-color);
-      }
+      <a href="https://fabianternis.dev" class="link-button" target="_blank" rel="noopener noreferrer">
+        PLACEHOLDER
+        <span>fabianternis.dev</span>
+      </a>
+    </div>
+  </main>
 
-      .bottom-right {
-        bottom: -50px;
-        right: -50px;
-        fill: var(--primary-color);
-      }
-
-      footer {
-        padding: 1.5rem;
-        text-align: center;
-        font-size: 0.9rem;
-        z-index: 10;
-      }
-
-      footer a {
-        color: inherit;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Decorative SVGs -->
-    <svg
-      class="decoration top-left"
-      width="200"
-      height="200"
-      viewBox="0 0 200 200"
-    >
-      <circle cx="100" cy="100" r="100" />
-    </svg>
-
-    <svg
-      class="decoration bottom-right"
-      width="250"
-      height="250"
-      viewBox="0 0 200 200"
-    >
-      <rect x="0" y="0" width="200" height="200" rx="50" />
-    </svg>
-
-    <main class="content">
-      <h1>Links to the Sites</h1>
-
-      <div class="button-container">
-        <a href="https://kaiserslautern.bund.de" class="btn">BUND</a>
-        <a href="https://fabianternis.de" class="btn">PLACEHOLDER</a>
-        <a href="https://fabianternis.dev" class="btn">PLACEHOLDER</a>
-      </div>
-    </main>
-
-    <footer>by Norwin, Max and Fabian</footer>
-  </body>
+  <footer>
+    by Norwin, Max and Fabian, no safety for external links ...
+  </footer>
+</body>
 </html>
