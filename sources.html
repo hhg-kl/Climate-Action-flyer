@@ -6,12 +6,10 @@
   <title>Sources & References</title>
   <style>
     :root {
-      --bg-color: #f8fafc;
-      --text-color: #1e293b;
-      --primary-color: #334155;
-      --accent-color: #64748b;
-      --link-bg: #ffffff;
-      --border-color: #e2e8f0;
+      --bg-color: #fff;
+      --text-color: #323232;
+      --primary-color: #2e6f40;
+      --secondary-color: #f4b8c7;
     }
 
     * {
@@ -21,24 +19,13 @@
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      line-height: 1.5;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 5px;
-      background: linear-gradient(90deg, #334155, #94a3b8);
-      z-index: 10;
+      line-height: 1.6;
     }
 
     main {
@@ -46,132 +33,126 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 4rem 1.5rem;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
+      padding: 3rem 1.5rem;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 700;
+      margin-bottom: 2rem;
       color: var(--primary-color);
-      letter-spacing: -0.025em;
-      margin-bottom: 0.5rem;
+      text-align: center;
     }
 
-    .subtitle {
-      color: var(--accent-color);
-      font-size: 1rem;
-    }
-
-    .sources-grid {
-      display: grid;
-      gap: 0.75rem;
-      width: 100%;
-      max-width: 600px;
-    }
-
-    .source-card {
+    .sources-container {
       display: flex;
       flex-direction: column;
-      padding: 1.25rem;
-      background-color: var(--link-bg);
+      gap: 0.75rem;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .source-item {
+      display: block;
+      padding: 1rem 1.5rem;
+      background-color: #f9f9f9;
+      color: var(--text-color);
       text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      transition: all 0.2s ease-in-out;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      border: 1px solid #eee;
+      transition: all 0.2s ease;
     }
 
-    .source-card:hover {
-      border-color: var(--accent-color);
-      transform: translateX(4px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    .source-item:hover {
+      border-color: var(--primary-color);
+      background-color: #fff;
+      transform: translateX(5px);
     }
 
-    .source-name {
+    .source-label {
+      display: block;
       font-weight: 600;
-      font-size: 1.1rem;
       color: var(--primary-color);
     }
 
     .source-url {
+      display: block;
       font-size: 0.85rem;
-      color: var(--accent-color);
-      margin-top: 0.25rem;
-      font-family: 'SFMono-Regular', Consolas, monospace;
+      opacity: 0.7;
       word-break: break-all;
+    }
+
+    .back-link {
+      margin-top: 3rem;
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--secondary-color);
+      border-radius: 50px;
+      transition: all 0.2s ease;
+    }
+
+    .back-link:hover {
+      background-color: var(--secondary-color);
     }
 
     footer {
       padding: 2rem;
       text-align: center;
       font-size: 0.85rem;
-      color: var(--accent-color);
-      border-top: 1px solid var(--border-color);
+      opacity: 0.6;
     }
 
     @media (max-width: 480px) {
-      main { padding: 2rem 1rem; }
-      h1 { font-size: 1.5rem; }
+      h1 { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
 
   <main>
-    <header>
-      <h1>Sources & References</h1>
-      <p class="subtitle">External documentation and image credits</p>
-    </header>
+    <h1>Sources</h1>
     
-    <div class="sources-grid">
-      <!-- BUND -->
-      <a href="https://kaiserslautern.bund.net" class="source-card" target="_blank" rel="noopener">
-        <span class="source-name">BUND Kaiserslautern</span>
+    <div class="sources-container">
+      <a href="https://kaiserslautern.bund.net" class="source-item" target="_blank">
+        <span class="source-label">BUND Kaiserslautern</span>
         <span class="source-url">kaiserslautern.bund.net</span>
       </a>
 
-      <!-- Wikipedia -->
-      <a href="https://de.wikipedia.org" class="source-card" target="_blank" rel="noopener">
-        <span class="source-name">Wikipedia</span>
+      <a href="https://de.wikipedia.org" class="source-item" target="_blank">
+        <span class="source-label">Wikipedia</span>
         <span class="source-url">de.wikipedia.org</span>
       </a>
 
-      <!-- Wikimedia -->
-      <a href="https://wikimedia.org" class="source-card" target="_blank" rel="noopener">
-        <span class="source-name">Wikimedia Commons</span>
+      <a href="https://wikimedia.org" class="source-item" target="_blank">
+        <span class="source-label">Wikimedia Commons</span>
         <span class="source-url">wikimedia.org (by Wikipedia)</span>
       </a>
 
-      <!-- SWR -->
-      <a href="https://www.swr.de/swraktuell/rheinland-pfalz/kaiserslautern/nachhaltigkeit-und-klimaschutz-auf-dem-pfaff-gelaende-in-kaiserslautern-100.html" class="source-card" target="_blank" rel="noopener">
-        <span class="source-name">SWR Aktuell</span>
-        <span class="source-url">swr.de/swraktuell/.../pfaff-gelaende</span>
+      <a href="https://www.swr.de/swraktuell/rheinland-pfalz/kaiserslautern/nachhaltigkeit-und-klimaschutz-auf-dem-pfaff-gelaende-in-kaiserslautern-100.html" class="source-item" target="_blank">
+        <span class="source-label">SWR Aktuell</span>
+        <span class="source-url">swr.de (Pfaff-Gelände Report)</span>
       </a>
 
-      <!-- SDG21 -->
-      <a href="https://sdg21.eu/db/esa-studierendenwohnheim-kaiserslautern" class="source-card" target="_blank" rel="noopener">
-        <span class="source-name">sdg21.eu Database</span>
+      <a href="https://sdg21.eu/db/esa-studierendenwohnheim-kaiserslautern" class="source-item" target="_blank">
+        <span class="source-label">sdg21.eu</span>
         <span class="source-url">sdg21.eu/db/esa-studierendenwohnheim</span>
       </a>
 
-      <!-- KL.de -->
-      <a href="https://www.kaiserslautern.de" class="source-card" target="_blank" rel="noopener">
-        <span class="source-name">Stadt Kaiserslautern</span>
+      <a href="https://www.kaiserslautern.de" class="source-item" target="_blank">
+        <span class="source-label">Stadt Kaiserslautern</span>
         <span class="source-url">kaiserslautern.de</span>
       </a>
 
-      <!-- Pixabay -->
-      <a href="https://pixabay.com" class="source-card" target="_blank" rel="noopener">
-        <span class="source-name">Pixabay</span>
-        <span class="source-url">pixabay.com (Stock Imagery)</span>
+      <a href="https://pixabay.com" class="source-item" target="_blank">
+        <span class="source-label">Pixabay</span>
+        <span class="source-url">pixabay.com</span>
       </a>
     </div>
+
+    <a href="index.html" class="back-link">Back to Links</a>
   </main>
 
   <footer>
