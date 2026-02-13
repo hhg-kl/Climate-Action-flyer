@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sources & References</title>
+  <style>
+    :root {
+      --bg-color: #f8fafc;
+      --text-color: #1e293b;
+      --primary-color: #334155;
+      --accent-color: #64748b;
+      --link-bg: #ffffff;
+      --border-color: #e2e8f0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #334155, #94a3b8);
+      z-index: 10;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      letter-spacing: -0.025em;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--accent-color);
+      font-size: 1rem;
+    }
+
+    .sources-grid {
+      display: grid;
+      gap: 0.75rem;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .source-card {
+      display: flex;
+      flex-direction: column;
+      padding: 1.25rem;
+      background-color: var(--link-bg);
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .source-card:hover {
+      border-color: var(--accent-color);
+      transform: translateX(4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .source-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--primary-color);
+    }
+
+    .source-url {
+      font-size: 0.85rem;
+      color: var(--accent-color);
+      margin-top: 0.25rem;
+      font-family: 'SFMono-Regular', Consolas, monospace;
+      word-break: break-all;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--accent-color);
+      border-top: 1px solid var(--border-color);
+    }
+
+    @media (max-width: 480px) {
+      main { padding: 2rem 1rem; }
+      h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <header>
+      <h1>Sources & References</h1>
+      <p class="subtitle">External documentation and image credits</p>
+    </header>
+    
+    <div class="sources-grid">
+      <!-- BUND -->
+      <a href="https://kaiserslautern.bund.net" class="source-card" target="_blank" rel="noopener">
+        <span class="source-name">BUND Kaiserslautern</span>
+        <span class="source-url">kaiserslautern.bund.net</span>
+      </a>
+
+      <!-- Wikipedia -->
+      <a href="https://de.wikipedia.org" class="source-card" target="_blank" rel="noopener">
+        <span class="source-name">Wikipedia</span>
+        <span class="source-url">de.wikipedia.org</span>
+      </a>
+
+      <!-- Wikimedia -->
+      <a href="https://wikimedia.org" class="source-card" target="_blank" rel="noopener">
+        <span class="source-name">Wikimedia Commons</span>
+        <span class="source-url">wikimedia.org (by Wikipedia)</span>
+      </a>
+
+      <!-- SWR -->
+      <a href="https://www.swr.de/swraktuell/rheinland-pfalz/kaiserslautern/nachhaltigkeit-und-klimaschutz-auf-dem-pfaff-gelaende-in-kaiserslautern-100.html" class="source-card" target="_blank" rel="noopener">
+        <span class="source-name">SWR Aktuell</span>
+        <span class="source-url">swr.de/swraktuell/.../pfaff-gelaende</span>
+      </a>
+
+      <!-- SDG21 -->
+      <a href="https://sdg21.eu/db/esa-studierendenwohnheim-kaiserslautern" class="source-card" target="_blank" rel="noopener">
+        <span class="source-name">sdg21.eu Database</span>
+        <span class="source-url">sdg21.eu/db/esa-studierendenwohnheim</span>
+      </a>
+
+      <!-- KL.de -->
+      <a href="https://www.kaiserslautern.de" class="source-card" target="_blank" rel="noopener">
+        <span class="source-name">Stadt Kaiserslautern</span>
+        <span class="source-url">kaiserslautern.de</span>
+      </a>
+
+      <!-- Pixabay -->
+      <a href="https://pixabay.com" class="source-card" target="_blank" rel="noopener">
+        <span class="source-name">Pixabay</span>
+        <span class="source-url">pixabay.com (Stock Imagery)</span>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    by Norwin, Max and Fabian
+  </footer>
+</body>
+</html>
