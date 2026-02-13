@@ -1,162 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sources & References</title>
-  <style>
-    :root {
-      --bg-color: #fff;
-      --text-color: #323232;
-      --primary-color: #2e6f40;
-      --secondary-color: #f4b8c7;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sources & References</title>
+    <style>
+      :root {
+        --bg-color: #fff;
+        --text-color: #323232;
+        --primary-color: #2e6f40;
+        --secondary-color: #f4b8c7;
+      }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      line-height: 1.6;
-    }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.6;
+      }
 
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 3rem 1.5rem;
-    }
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 1.5rem;
+      }
 
-    h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
-      color: var(--primary-color);
-      text-align: center;
-    }
+      h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: var(--primary-color);
+        text-align: center;
+      }
 
-    .sources-container {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      width: 100%;
-      max-width: 500px;
-    }
+      .sources-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+        max-width: 500px;
+      }
 
-    .source-item {
-      display: block;
-      padding: 1rem 1.5rem;
-      background-color: #f9f9f9;
-      color: var(--text-color);
-      text-decoration: none;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      transition: all 0.2s ease;
-    }
+      .source-item {
+        display: block;
+        padding: 1rem 1.5rem;
+        background-color: #f9f9f9;
+        color: var(--text-color);
+        text-decoration: none;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        transition: all 0.2s ease;
+      }
 
-    .source-item:hover {
-      border-color: var(--primary-color);
-      background-color: #fff;
-      transform: translateX(5px);
-    }
+      .source-item:hover {
+        border-color: var(--primary-color);
+        background-color: #fff;
+        transform: translateX(5px);
+      }
 
-    .source-label {
-      display: block;
-      font-weight: 600;
-      color: var(--primary-color);
-    }
+      .source-label {
+        display: block;
+        font-weight: 600;
+        color: var(--primary-color);
+      }
 
-    .source-url {
-      display: block;
-      font-size: 0.85rem;
-      opacity: 0.7;
-      word-break: break-all;
-    }
+      .source-url {
+        display: block;
+        font-size: 0.85rem;
+        opacity: 0.7;
+        word-break: break-all;
+      }
 
-    .back-link {
-      margin-top: 3rem;
-      color: var(--text-color);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      padding: 0.5rem 1rem;
-      border: 2px solid var(--secondary-color);
-      border-radius: 50px;
-      transition: all 0.2s ease;
-    }
+      .back-link {
+        margin-top: 3rem;
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        border: 2px solid var(--secondary-color);
+        border-radius: 50px;
+        transition: all 0.2s ease;
+      }
 
-    .back-link:hover {
-      background-color: var(--secondary-color);
-    }
+      .back-link:hover {
+        background-color: var(--secondary-color);
+      }
 
-    footer {
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.85rem;
-      opacity: 0.6;
-    }
+      footer {
+        padding: 2rem;
+        text-align: center;
+        font-size: 0.85rem;
+        opacity: 0.6;
+      }
 
-    @media (max-width: 480px) {
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
-</head>
-<body>
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Sources</h1>
 
-  <main>
-    <h1>Sources</h1>
-    
-    <div class="sources-container">
-      <a href="https://kaiserslautern.bund.net" class="source-item" target="_blank">
-        <span class="source-label">BUND Kaiserslautern</span>
-        <span class="source-url">kaiserslautern.bund.net</span>
-      </a>
+      <div class="sources-container">
+        <a
+          href="https://kaiserslautern.bund.net"
+          class="source-item"
+          target="_blank"
+        >
+          <span class="source-label">BUND Kaiserslautern</span>
+          <span class="source-url">kaiserslautern.bund.net</span>
+        </a>
 
-      <a href="https://de.wikipedia.org" class="source-item" target="_blank">
-        <span class="source-label">Wikipedia</span>
-        <span class="source-url">de.wikipedia.org</span>
-      </a>
+        <a href="https://de.wikipedia.org" class="source-item" target="_blank">
+          <span class="source-label">Wikipedia</span>
+          <span class="source-url">de.wikipedia.org</span>
+        </a>
 
-      <a href="https://wikimedia.org" class="source-item" target="_blank">
-        <span class="source-label">Wikimedia Commons</span>
-        <span class="source-url">wikimedia.org (by Wikipedia)</span>
-      </a>
+        <a href="https://wikimedia.org" class="source-item" target="_blank">
+          <span class="source-label">Wikimedia Commons</span>
+          <span class="source-url">wikimedia.org (by Wikipedia)</span>
+        </a>
 
-      <a href="https://www.swr.de/swraktuell/rheinland-pfalz/kaiserslautern/nachhaltigkeit-und-klimaschutz-auf-dem-pfaff-gelaende-in-kaiserslautern-100.html" class="source-item" target="_blank">
-        <span class="source-label">SWR Aktuell</span>
-        <span class="source-url">swr.de (Pfaff-Gelände Report)</span>
-      </a>
+        <a
+          href="https://www.swr.de/swraktuell/rheinland-pfalz/kaiserslautern/nachhaltigkeit-und-klimaschutz-auf-dem-pfaff-gelaende-in-kaiserslautern-100.html"
+          class="source-item"
+          target="_blank"
+        >
+          <span class="source-label">SWR Aktuell</span>
+          <span class="source-url">swr.de (Pfaff-Gelände Report)</span>
+        </a>
 
-      <a href="https://sdg21.eu/db/esa-studierendenwohnheim-kaiserslautern" class="source-item" target="_blank">
-        <span class="source-label">sdg21.eu</span>
-        <span class="source-url">sdg21.eu/db/esa-studierendenwohnheim</span>
-      </a>
+        <a
+          href="https://sdg21.eu/db/esa-studierendenwohnheim-kaiserslautern"
+          class="source-item"
+          target="_blank"
+        >
+          <span class="source-label">sdg21.eu</span>
+          <span class="source-url">sdg21.eu/db/esa-studierendenwohnheim</span>
+        </a>
 
-      <a href="https://www.kaiserslautern.de" class="source-item" target="_blank">
-        <span class="source-label">Stadt Kaiserslautern</span>
-        <span class="source-url">kaiserslautern.de</span>
-      </a>
+        <a
+          href="https://greenwall.com.au/blog/lightweight-greenroofs-eco-pillows-letting-mother-nature-sleep-easy/"
+          class="source-item"
+          target="_blank"
+        >
+          <span class="source-label">Greenwall Australia</span>
+          <span class="source-url">greenwall.com.au (Image Source)</span>
+        </a>
 
-      <a href="https://pixabay.com" class="source-item" target="_blank">
-        <span class="source-label">Pixabay</span>
-        <span class="source-url">pixabay.com</span>
-      </a>
-    </div>
+        <a
+          href="https://www.kaiserslautern.de"
+          class="source-item"
+          target="_blank"
+        >
+          <span class="source-label">Stadt Kaiserslautern</span>
+          <span class="source-url">kaiserslautern.de</span>
+        </a>
 
-    <a href="index.html" class="back-link">Back to Links</a>
-  </main>
+        <a
+          href="https://pfaffquartier-klimaneutral.de/projektpartner/stadt-kaiserslautern"
+          class="source-item"
+          target="_blank"
+        >
+          <span class="source-label">Pfaffquartier Klimaneutral</span>
+          <span class="source-url">pfaffquartier-klimaneutral.de (Image Source)</span>
+        </a>
 
-  <footer>
-    by Norwin, Max and Fabian
-  </footer>
-</body>
+        <a
+          href="https://www.bbc.co.uk/news/articles/cx25xq6wxldo"
+          class="source-item"
+          target="_blank"
+        >
+          <span class="source-label">BBC News</span>
+          <span class="source-url">bbc.co.uk (Image Source)</span>
+        </a>
+
+        <a href="https://pixabay.com" class="source-item" target="_blank">
+          <span class="source-label">Pixabay</span>
+          <span class="source-url">pixabay.com</span>
+        </a>
+      </div>
+
+      <a href="index.html" class="back-link">Back to Links</a>
+    </main>
+
+    <footer>by Norwin, Max and Fabian</footer>
+  </body>
 </html>
