@@ -110,8 +110,24 @@
       text-align: center;
       font-size: 0.9rem;
       color: var(--text-color);
-      opacity: 0.7;
       z-index: 1;
+    }
+
+    .footer-credits {
+      opacity: 0.7;
+      margin-bottom: 0.5rem;
+    }
+
+    .sources-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 2px solid var(--secondary-color);
+      transition: opacity 0.2s;
+    }
+
+    .sources-link:hover {
+      opacity: 0.7;
     }
 
     @media (max-width: 480px) {
@@ -161,7 +177,8 @@
   </main>
 
   <footer>
-    by Norwin, Max and Fabian, no safety for external links ...
+    <div class="footer-credits">by Norwin, Max and Fabian, no safety for external links ...</div>
+    <a href="sources.html" class="sources-link">Sources</a>
   </footer>
 </body>
 </html>
